@@ -1,0 +1,26 @@
+[meta]
+title = "Test page"
+description = "Test page of my website"
+author = "jumbledFox"
+background = "yellow"
+
+[[boxes]]
+[[boxes.parts]]
+kind = "title"
+content = "# Testing! "
+
+[[boxes.parts]]
+kind = "body"
+content = """
+This page is for TESTING!!!!!!!!!
+"""
+# ---------- #
+[[boxes]]
+[[boxes.parts]]
+kind = "body"
+content = """
+# TEST!!
+Testing!! I'm testing!!!
+
+I'm too busy TESTING to hear you!!!
+"""
