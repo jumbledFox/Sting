@@ -69,8 +69,8 @@ fn main() {
             let d_path_split: Vec<&str> = directory_path.split("\\").collect();
             let mut j = 2;
             for &i in &d_path_split[..d_path_split.len()-1] {
-                if i == "" { navbar += "<li><a href=\"F:/Data/Projects/Rust/sting/output/index.html\">Home</a></li>"; continue; }
-                let link = "<li><a href=\"F:/Data/Projects/Rust/sting/output/".to_owned() + &d_path_split[0..j].join("/") + "/index.html\">" + &i + "</a></li>";
+                if i == "" { navbar += "<li><a href=\"/output/index.html\">Home</a></li>"; continue; }
+                let link = "<li><a href=\"/output".to_owned() + &d_path_split[0..j].join("/") + "/index.html\">" + &i + "</a></li>";
                 navbar += &link;
                 j+=1;
             }
