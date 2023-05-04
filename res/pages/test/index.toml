@@ -1,6 +1,6 @@
 [meta]
-title = "Test page"
-description = "Test page of my website"
+title = "Test Page"
+description = "TESTING!!!"
 author = "jumbledFox"
 background = "yellow"
 
@@ -23,4 +23,6 @@ content = """
 Testing!! I'm testing!!!
 
 I'm too busy TESTING to hear you!!!
+
+<audio controls autoplay><source src="siren.mp3" type="audio/mp3">Your browser does not support the audio element... Why not?</audio>
 """

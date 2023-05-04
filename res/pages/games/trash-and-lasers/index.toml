@@ -1,0 +1,21 @@
+[meta]
+title = "Trash and Lasers"
+description = "Rid the ocean of trash... but with LASERS!"
+author = "jumbledFox"
+background = "rainbow"
+
+[[boxes]]
+[[boxes.parts]]
+kind = "title"
+content = "# Trash and Lasers"
+
+[[boxes.parts]]
+kind = "body"
+content = """
+TRASH AND LASERS
+the most EPICEST game of the EPICS. Best game in 2023
+
+Shoot the fish, maybe even get the TRASH..
+
+## ENJOY THE VIDEO GAME EXPERIENCE!! >:3
+"""

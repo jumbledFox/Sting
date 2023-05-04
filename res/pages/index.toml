@@ -1,6 +1,6 @@
 [meta]
-title = "jumbledFox's Website"
-description = "Welcome to my website!"
+title = "Home"
+description = "This is my website, home to projects and programs, and some of them work!"
 author = "jumbledFox"
 background = "rainbow"
 
@@ -24,11 +24,11 @@ content = """
 ## *GAMES*
 I've made a few games in my time, some more than others.. Here they are in all their glory.
 
-[Swag Weaselz](/games/swag-weaselz) - Made in around a day, this simple scratch game about shooting blocky green enemies is weasel-tastic. Now featuring some epic doom-style box art I drew!
+[Swag Weaselz](/output/games/swag-weaselz) - Made in around a day, this simple scratch game about shooting blocky green enemies is weasel-tastic. Now featuring some epic doom-style box art I drew!
 
-[Trash and Lasers](/games/trash-and-lasers) -  A game about destroying trash in the ocean with lasers! Made for the Polymars [SEAJAM](https://itch.io/jam/seajam).
+[Trash and Lasers](/output/games/trash-and-lasers) -  A game about destroying trash in the ocean with lasers! Made for the Polymars [SEAJAM](https://itch.io/jam/seajam).
 
-[Favibird](/games/favibird) - A flappy bird game played in the favicon.
+[Favibird](output/games/favibird) - A flappy bird game played in the favicon.
 """
 [[boxes.parts]]
 kind = "body"
@@ -36,11 +36,11 @@ content = """
 ## *Electronics*
 From gizmos to gadgets, I like to tinker. Here are some physical things I've made, more to come in the future.
 
-### - [The Internet](/other/the-internet)
+### - [The Internet](/output/projects/the-internet)
 My homemade prop of The Internet from The IT Crowd.
 
-### - [Red LED flasher](/url)
-An eye mask that flashes red light at a user-defined speed and brightness. For my mum <3
+### - [LED Flashing Light Mask](/output/projects/led-flashing-light-mask)
+An eye mask that flashes red light at a user-defined speed and brightness. Made for my mum
 """
 # ---------- #
 [[boxes]]
