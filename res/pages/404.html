@@ -11,6 +11,23 @@
                 --grad: url("/res/images/gradients/rainbow.png");
             }
         </style>
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            var redirects = {
+                "/other/the-internet": "/projects/the-internet",
+                "/other/jumbledfont": "/projects/jumbledfont",
+                "/other/music": "/projects/music",
+                "/favibird": "/games/favibird",
+                "/about": "/",
+            };
+
+            for (const [key, value] of Object.entries(redirects)) {
+                if (window.location.pathname == key) {
+                    window.location.pathname = value;
+                }
+            }
+        });
+        </script>
     </head>
     <body>
         <div id="background"></div>
