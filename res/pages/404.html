@@ -22,8 +22,8 @@
             };
 
             for (const [key, value] of Object.entries(redirects)) {
-                if (window.location.pathname == key || window.location.pathname.slice(0, -1) == key) {
-                    window.location.pathname = value;
+                if (window.location.pathname.startsWith(key) || window.location.pathname.slice(0, -1).startsWith(key)) {
+                    window.location.pathname = window.location.pathname.replace(key, value);
                 }
             }
         });
