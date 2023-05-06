@@ -1,0 +1,27 @@
+[meta]
+title = "jumbledFont"
+description = "A font I made"
+author = "jumbledFox"
+background = "rainbow"
+
+[[boxes]]
+[[boxes.parts]]
+kind = "title"
+content = "# jumbledFont"
+
+[[boxes.parts]]
+kind = "body"
+content = """
+A little while ago I made a font called <r>jumbledFont</r>. It was originally for _this_ website, but it wasn't very readable. I now use it for Visual Studio Code and boy do I love it.
+
+Each character is 10x20 pixels, with a 2 pixel gap between characters. For best results use it with a size of 16 with antialiasing disabled.
+
+It's currently incomplete and will remain that way for a while..!
+
+Here's what it looks like when I code in it:
+![jumbledFont in action](jumbledfont.png)
+
+## <a href="/jumbledFont.ttf" download target="_blank">DOWNLOAD</a>
+
+May 2022
+"""

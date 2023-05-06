@@ -98,8 +98,8 @@ fn main() {
             navbar = String::from("<div id=\"topnav\">\n<ul class=\"breadcrumb\">\n");
             let mut j = 2;
             for &i in &d_path_split[..d_path_split.len()-2] {
-                if i == "" { navbar += "<li><a href=\"/output/\">Home</a></li>"; continue; }
-                let link = "<li><a href=\"/output".to_owned() + &d_path_split[0..j].join("/") + "/\">" + path_fancy_names.get(&d_path_split[..j].join("\\").to_string()).unwrap_or(&"Q//Q".to_owned()) + "</a></li>";
+                if i == "" { navbar += "<li><a href=\"/\">Home</a></li>"; continue; }
+                let link = "<li><a href=\"".to_owned() + &d_path_split[0..j].join("/") + "/\">" + path_fancy_names.get(&d_path_split[..j].join("\\").to_string()).unwrap_or(&"Q//Q".to_owned()) + "</a></li>";
                 navbar += &link;
                 j+=1;
             }

@@ -1,0 +1,306 @@
+<html>
+    <head>
+        <title>Favibird</title>
+        <meta name="description" content="Flappy bird played in the FAVICON!">
+        <meta name="author" content="jumbledFox">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link id="favicon" rel="icon" type="image/png" href="/res/images/rainbow.png">
+        <link rel="stylesheet" href="/res/style.css">
+        <style>
+            :root {
+                --grad: url("/res/images/gradients/rainbow.png");
+            }
+        </style>
+    </head>
+    <body>
+        <div id="background"></div>
+        <div id="all">
+        <div id="checker"></div>
+        <div id="topnav">
+<ul class="breadcrumb">
+<li><a href="/">Home</a></li><li><a href="/games/">Games</a></li><li>Favibird</li>
+</ul></div>
+        <div id="content">
+            <div class="box">
+<div class="title">
+<h1>Favibird</h1>
+</div><div class="body">
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    console.log(":3");
+
+
+	// globals
+	var canvas = document.getElementById("myCanvas");
+	var ctx = canvas.getContext("2d");
+	var state = "title";
+	var space = false;
+	var hiScore = localStorage.getItem("HS");
+	
+	// loser mode
+	window.toggleLoser = function(checkbox) {
+		if (checkbox.checked) {
+			console.log("gud");
+			canvas.style.width = "640px";
+			canvas.style.height = "640px";
+			canvas.style.display = "block";
+		} else {
+			console.log("bad");
+			canvas.style.width = "0px";
+			canvas.style.height = "0px";
+			canvas.style.display = "none";
+		}
+	}
+	
+	if(hiScore == undefined) {
+		hiScore = 0;
+		localStorage.setItem("HS", hiScore);
+	}
+	
+	// Set the favicon
+    function setFavicon() {
+        var favicon = document.getElementById("favicon");
+
+        favicon.setAttribute("href", canvas.toDataURL());
+        history.replaceState(null, null, window.location.hash == "#jumbledFox#" ? "#fumbledJox#" : "#jumbledFox#");
+    }
+
+    
+    // prepares an image to be loaded and returns the element
+    var images = [];
+    function addImage(imgSrc) {
+        var newImg = new Image();
+        newImg.crossOrigin = "Anonymous";
+        console.log("https://jumbledfox.github.io/games/favibird/" + imgSrc);
+        images.push({img:newImg, src:"https://jumbledfox.github.io/games/favibird/" + imgSrc});
+
+        return newImg;
+    }
+
+    // Set all images to be loaded
+    var birdImg = addImage("bird.png");
+    var pipesImg = addImage("pipes.png");
+    var backgroundImg = addImage("background.png");
+    var cloudImg = addImage("cloud.png");
+    var spaceImg = addImage("space.png");
+    var gameOverImg = addImage("gameover.png");
+
+    // Load each image
+    loadImages();
+
+    function loadImages() {
+        if (images.length > 0) {
+            
+            // load the first image in the array
+            images[0].img.onload = loadImages;
+            images[0].img.src = images[0].src;
+            
+            // delete the first element of the array
+            images.shift();
+            console.log("loaded image " + (5 - images.length));
+        } else {
+            console.log("start");
+            start();
+        }
+    }
+
+    var birdPos, birdYvel, birdTerminalVelocity, control, pipes, score; // game variables
+    function resetVars() {
+        birdPos = [1, 5];
+        birdYvel = 0;
+        birdTerminalVelocity = 2;
+        control = true;
+
+        pipes = undefined; // Looks something like this [{x: 0, offset: 0}, {x: 0, offset: 0}]
+
+        score = 0;
+    }
+    
+
+    function gameLoop() {
+        if (state == "title") {
+            // Wait until space is pressed, then start the game
+            if (space) {
+                state = "game";
+                console.log("Game started!");
+            }
+        }
+
+
+        else if (state == "game") {
+            //// Update the game ////
+            if (pipes == undefined) {
+                pipes = [{x: 8, offset: -2}, {x: 16, offset: -4}];
+            }
+
+            birdYvel += 0.1;
+            if (birdYvel > birdTerminalVelocity) {
+                birdYvel = birdTerminalVelocity;
+            }
+
+            if (space && control) {
+                console.log("Flap!");
+                birdYvel = -0.7;
+            }
+
+            birdPos[1] += birdYvel;
+
+            
+            // Pipes
+            if (control) {
+                for (var i = 0; i < pipes.length; i++) {
+                    pipes[i].x -= 0.5;
+                    if (pipes[i].x <= -1) {
+                        pipes.splice(i, 1);
+                        pipes.push({x: 16, offset: Math.floor(Math.random() * 5) - 6});
+                    }
+
+                    if (pipes[i].x == -0.5) {
+                        score += 1;
+                    }
+
+                    if (pipes[i].x >= -1 && pipes[i].x <= 2) {
+                        if(!(Math.round(birdPos[1]) >= pipes[i].offset + 8 && Math.round(birdPos[1]) <= pipes[i].offset + 6 + 6)) {
+                            console.log("oops!");
+                            control = false;
+                            birdYvel = 0.9;
+                        }
+                    }
+                }
+
+
+                // Check if the bird is out of bounds or hit a pipe
+                if (Math.round(birdPos[1]) <= 0 || Math.round(birdPos[1]) >= 13) {
+                    console.log("oops!");
+                    control = false;
+                    birdYvel = 0.9;
+                }
+            }
+            
+            // If fallen //
+            if (Math.round(birdPos[1]) >= 13) {
+                birdPos[1] = 13;
+                drawGameOver.which = 0;
+                state = "gameover";
+            }
+        
+
+            //// Draw the game ////
+
+            // Background
+            ctx.drawImage(backgroundImg, 0, 0);
+
+            // Clouds
+            for(var i = 0; i < 4; i++) {
+                ctx.drawImage(cloudImg, i * 4, 12);
+            }
+            
+            // Pipes
+            for (var i = 0; i < pipes.length; i++) {
+                ctx.drawImage(pipesImg, pipes[i].x, pipes[i].offset);
+            }
+
+            // Bird
+            ctx.drawImage(birdImg, birdPos[0], birdPos[1]);
+
+            // Set title
+            document.title = score + " | Hi " + hiScore;
+
+            if(score > hiScore) {
+                hiScore = score;
+                localStorage.setItem("HS", hiScore);
+            }
+        }
+
+
+        else if (state == "gameover") {
+            // Game over screen, wait until space is pressed, then start the game
+            drawGameOver();
+
+            if (space) {
+                state = "game";
+                resetVars();
+                console.log("Game started (again)!");
+            }
+        }
+        space = false;
+    }
+
+    var intervalId;
+
+    function start() {
+        console.log("started");
+
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 16, 16);
+        
+        // Draw the 'Press Space' text, then start the game loop
+        drawSpacePress();
+        resetVars();
+        intervalId = window.setInterval(function() {
+            gameLoop();
+            setFavicon();
+        }, 75);
+    }
+
+    function stopLoop() {
+        window.clearInterval(intervalId);
+    }
+
+    function drawSpacePress() {
+        ctx.drawImage(backgroundImg, 0, 0);
+
+        ctx.drawImage(spaceImg, 0, 0);
+
+        setFavicon();
+        console.log("drew title!");
+    }
+
+    function drawGameOver() {
+        if (drawGameOver.which == undefined) {
+            drawGameOver.which = 0;
+        }
+
+        drawGameOver.text = ["Game Over!", score + " Hi: " + hiScore];
+
+        document.title = drawGameOver.text[Math.floor(drawGameOver.which / 60 * 2)];
+
+        ctx.drawImage(backgroundImg, 0, 0);
+
+        if (drawGameOver.which % 30 < 15) {
+            ctx.drawImage(gameOverImg, 0, 0);
+        } else {
+            ctx.drawImage(spaceImg, 0, 0);
+        }
+
+        drawGameOver.which += 1;
+
+        if (drawGameOver.which >= 60) {
+            drawGameOver.which = 0;
+        }
+    }
+
+
+    // Handle Space being pressed
+    window.addEventListener("keydown", function(event) {
+        if (event.keyCode == 32) { space = true; }
+    })
+
+});
+
+</script>
+<p>This is a game I made in around a day called 'FaviBird', it's called that because it's flappy bird, played in the favicon. Good pun, I know.</p>
+<p>This is meant to be played in the favicon, however if it doesn't work (or if you're a loser!!), enable 'Loser Mode' below, you loser!! Also it's a bit janky, thats not usually seen unless you're in 'Loser Mode' (you loser!!!), but - not to sound dispassionate - I don't really care.</p>
+<p>Also, this may only work in some browsers (like Microsoft Edge unfortunately), so if the favicon's not updating, and if you don't want to swallow your pride by enabling 'Loser Mode', Try a different browser!</p>
+<hr />
+<p>Credit to <a href="https://www.mashpoe.com">Mashpoe</a> for the inspiration and some of the code!</p>
+<hr />
+<p><strong>Loser Mode:</strong> <label><input type="checkbox" onchange="toggleLoser(this)"></label></p>
+<p><canvas id="myCanvas" width="16" height="16" style="display: none; isolation: isolate;"></canvas></p>
+<p>May 2022</p>
+</div></div>
+
+        </div>
+        </div>
+    </body>
+</html>

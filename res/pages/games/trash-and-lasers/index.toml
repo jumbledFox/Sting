@@ -6,16 +6,69 @@ background = "rainbow"
 
 [[boxes]]
 [[boxes.parts]]
-kind = "title"
-content = "# Trash and Lasers"
-
-[[boxes.parts]]
 kind = "body"
 content = """
-TRASH AND LASERS
-the most EPICEST game of the EPICS. Best game in 2023
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+    var ifrm = document.createElement("iframe");
+    ifrm.setAttribute("src", "/games/trash-and-lasers/packaged/index.html");
+    ifrm.setAttribute("allowtransparency", "true");
+    ifrm.setAttribute("scrolling", "no");
+    ifrm.setAttribute("allowfullscreen", "");
+    ifrm.setAttribute("frameborder", "0");
+    ifrm.setAttribute("width", "960");
+    ifrm.setAttribute("height", "590");
+    ifrm.style.maxWidth = "960px";
+    ifrm.style.maxHeight = "590px";
+    ifrm.style.marginTop = "1em";
+    ifrm.style.marginBottom = "-.5em";
 
-Shoot the fish, maybe even get the TRASH..
+    ifrm.style.isolation = "isolate";
 
-## ENJOY THE VIDEO GAME EXPERIENCE!! >:3
+    var bxcnt = document.createElement("div");
+    bxcnt.setAttribute("id", "boxcontainer");
+    bxcnt.style.display = "flex";
+    bxcnt.style.justifyContent = "center";
+
+    var bx = document.createElement("div");
+    bx.setAttribute("class", "box");
+    bx.setAttribute("id", "talbox");
+    bx.style.font = "1.2em/1.62 sans-serif";
+
+    var ttl = document.createElement("div");
+    ttl.setAttribute("class", "title");
+    ttl.setAttribute("id", "ttl");
+    var ttlh1 = document.createElement("h1");
+    ttlh1.innerText = "Trash and Lasers";
+    var bdy = document.createElement("div");
+    bdy.setAttribute("class", "body");
+    bdy.setAttribute("id", "talbody");
+    
+    document.getElementById("all").insertBefore(bxcnt, document.getElementById("content"));
+    document.getElementById("boxcontainer").appendChild(bx);
+    document.getElementById("talbox").appendChild(ttl);
+    document.getElementById("ttl").appendChild(ttlh1);
+    document.getElementById("talbox").appendChild(bdy);
+    document.getElementById("talbody").appendChild(ifrm);
+    console.log(":3");
+});
+</script>
+
+### ⚠ THIS ISN'T DESIGNED FOR MOBILE ⚠
+
+[itch.io link](https://jumbledfox.itch.io/trash-and-lasers)
+
+Trash and lasers is a game I made in around a week for the Polymars [SEAJAM](https://itch.io/jam/seajam). You place mirrors down to direct a laser beam across the level, making sure to hit all the floating trash and avoid any fish!
+
+A tutorial is built into the game but it isn't that good. Click the Plus button to make a new mirror (there's a limit!), this new mirror will be automatically selected, or you can click a mirror to select it. Once a mirror is selected, you can remove it with the Minus button, or rotate it with the two rotation buttons. There's also a button to remove all of the mirrors which can be quite useful.
+
+I think it's quite a fun little puzzle game.
+
+All of the assets were made by me, especially including the bloody splatters of exploded fish >:3
+
+This game has no bugs I know of.. but if it does - not to sound dispassionate - I don't really care.
+
+Enjoy!!!
+
+November 2021
 """

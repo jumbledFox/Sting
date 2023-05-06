@@ -10,9 +10,9 @@ kind = "body"
 content = """
 ## *GAMES*
 
-[Swag Weaselz](/output/games/swag-weaselz) - Made in around a day, this simple scratch game about shooting blocky green enemies is weasel-tastic. Now featuring some epic doom-style box art I drew!
+[Swag Weaselz](/games/swag-weaselz) - Made in around a day, this simple scratch game about shooting blocky green enemies is weasel-tastic. Now featuring some epic doom-style box art I drew!
 
-[Trash and Lasers](/output/games/trash-and-lasers) -  A game about destroying trash in the ocean with lasers! Made for the Polymars [SEAJAM](https://itch.io/jam/seajam).
+[Trash and Lasers](/games/trash-and-lasers) -  A game about destroying trash in the ocean with lasers! Made for the Polymars [SEAJAM](https://itch.io/jam/seajam).
 
-[Favibird](output/games/favibird) - A flappy bird game played in the favicon.
+[Favibird](/games/favibird) - A flappy bird game played in the favicon.
 """

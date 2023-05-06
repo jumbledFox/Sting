@@ -1,0 +1,21 @@
+[meta]
+title = "Projects"
+description = "Various projects I've made"
+author = "jumbledFox"
+background = "rainbow"
+
+[[boxes]]
+[[boxes.parts]]
+kind = "body"
+content = """
+## *Electronics*
+From gizmos to gadgets, I like to tinker. Here are some physical things I've made, more to come in the future.
+
+[The Internet](/projects/the-internet) - My homemade prop of The Internet from The IT Crowd.
+
+[LED Flashing Light Mask](/projects/led-flashing-light-mask) - An eye mask that flashes red light at a user-defined speed and brightness. Made for my mum
+
+## *Other various projects*
+
+[jumbledFont](/projects/jumbledfont) - A neat pixely font I made a while ago.
+"""

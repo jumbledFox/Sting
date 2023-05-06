@@ -1,0 +1,106 @@
+[meta]
+title = "LED Flashing light mask"
+description = "I made this for my mum"
+author = "jumbledFox"
+background = "rainbow"
+
+[[boxes]]
+[[boxes.parts]]
+kind = "title"
+content = "# LED Flashing light mask"
+
+[[boxes.parts]]
+kind = "body"
+content = """
+This is something I made for my mum a little while ago. It's an eye mask that flashes red LEDs at a user-controlled speed and brightness. Now, I'm no medical expert, so I have no clue why she wanted it, but according to her it's something that helps relieve stress, so I went and made it.
+
+![The final mask](final.jpg)
+"""
+[[boxes.parts]]
+kind = "body"
+content = """
+## Parts
+
+I began by ordering a bunch of parts online from [Bitsboxuk my beloved](https://www.bitsboxuk.com/), and a little while later they all showed up.
+
+![Parts](parts.jpg)
+
+These parts included a DC converting plug for power, better potentiometers, a switch, and the ATtiny 13 that would run the code.
+
+## Starting off - The case
+
+I started off by making the case. I ordered a nice little box and began work drilling holes.
+
+<imgrs50>![The box](case.PNG)
+
+Ready to drill! :3
+
+![Ready to drill!](ready2drill.jpg)
+
+And, after a long night of planning and drilling..
+
+![Drilled!!](drilled.jpg)
+
+Ok.. now the box is finished... what to do with this little guy?
+
+![Will he fit?](wheretoputtheattiny.jpg)
+
+## Circuitry
+
+I started off by making the circuit on a breadboard with my arduino. I wrote some code to read the value of the speed potentiometer and BOOM, led flashing.
+
+But.. how am I gonna get this onto my attiny?
+
+## Programming the ATtiny
+
+So, I laid out my arduino ready to program the ATtiny..
+
+![Programming the ATtiny](programmingattiny.jpg)
+
+..but, nothing? It's not uploading! Why not??!?!
+
+And.. after many hours... I realised I had to burn the bootloader program to the arduino....
+
+![Bootloader burned.](burnbootloader.jpg)
+
+And, now I can program the ATtiny..
+
+<imgrs50>![Blink on ATtiny](attinyblink.jpg)
+
+![Running the circuit on the ATtiny](runningonattiny.jpg)
+
+Yippee!
+
+Ok, I have the ATtiny programmed, the circuit crudely drawn out, now to start combining the case and the circuit.
+
+## Circuitry II
+
+I soldered many wires to the different knobs and levers
+
+![Wires in case](insides1.jpg)
+
+And then I soldered them to the breadboard!
+
+![Wires from case soldered to the breadboard](insides2.jpg)
+
+I cut the mask part off of a red light mask my mum already owned that didn't flash, and attached it to the above mess.
+![The mask I stole](maskb4.jpg)
+
+![Connecting it to the mess](insides3.jpg)
+
+Before finishing it off I went out for a nice bike ride
+
+![Bike](lovelyride.jpg)
+
+And then, I finally closed it up for good! Here's a video of it in action, on my mothers bedside table.
+
+FLASHING LIGHTS AND AWKWARD SHUFFLING NOISES WARNING
+
+<div>
+<video controls style="width: 100%; isolation: isolate;">
+  <source src="inaction.mp4" type="video/mp4">
+  In this day and age, your browser still does not support HTML video. I'm not mad, just disappointed.
+</video></div>
+
+April 2023
+"""

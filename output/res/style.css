@@ -9,7 +9,12 @@ body {
     --grad: url("images/gradients/rainbow.png");
 }
 
+canvas {
+    image-rendering: pixelated;
+}
+
 h1, h2, h3 {
+    font-family: sans-serif;
     margin-top: .5em;
     margin-bottom: -.25em;
 }
@@ -73,7 +78,7 @@ div.box {
 
 }
 
-div.box>.title h1 {
+.title h1 {
     color: #1A1C2C;
     margin: 0em 0em 0em .75em;
     word-wrap:break-word;

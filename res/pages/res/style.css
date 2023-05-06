@@ -1,0 +1,193 @@
+body {
+    margin : 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+:root {
+    --grad: url("images/gradients/rainbow.png");
+}
+
+canvas {
+    image-rendering: pixelated;
+}
+
+h1, h2, h3 {
+    font-family: sans-serif;
+    margin-top: .5em;
+    margin-bottom: -.25em;
+}
+
+div.box>:first-child {
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+}
+div.box>:not(:first-child) { /*Remove top border of elements that aren't first so they connect easier*/
+    border-top: none !important;
+}
+div.box>:last-child {
+    border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+}
+
+img {
+    isolation: isolate;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#background {
+    background: var(--grad);
+    background-size: cover;
+    background-repeat:round;
+    width: 110%;
+    height: 100%;
+    position: fixed;
+    z-index: 0;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
+#checker {
+    background-image: url("images/background.png");
+    background-position: left 36px top 20px;
+    width: 110%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+#all {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#content {
+    overflow-x: hidden;
+    margin:0em auto;
+    max-width:40em;
+    padding:0 .62em;
+    font:1.2em/1.62 sans-serif;
+}
+
+div.box { 
+    margin: 1.5em 0 2em 0;
+
+}
+
+.title h1 {
+    color: #1A1C2C;
+    margin: 0em 0em 0em .75em;
+    word-wrap:break-word;
+    font-weight: bold;
+}
+div.box>.title {
+
+    /*box-shadow: 15px 0 15px -4px #444, -15px 0 15px -4px #444, 0 -15px 15px -4px #444;*/
+
+    border: #fff solid 7px;
+
+    background-color: #fff;
+}
+div.box>.body {
+    padding: 0.2em 1.4em 1em 1.4em;
+    font-size: 1em;
+
+    /*box-shadow: 15px 0 15px -8px #444, -15px 0 15px -8px #444, 0 15px 15px -4px #444;*/
+    border: #fff solid 7px;
+
+    background-color: #1A1C2C;
+    background-color: #16192B;
+}
+div.box>.breadcrumbs>p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+div.box>.breadcrumbs {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-radius: 20px;
+}
+
+ul.breadcrumb {
+    list-style: none;
+    margin-top: 0.5em;
+    padding: 0;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+  
+#topnav {
+    overflow: hidden;
+    background-color: #16192B;
+    padding-left: 1em;
+    padding-top: .5em;
+    border-bottom: 7px #fff solid;
+}
+
+ul.breadcrumb> :last-child {
+    color:white;
+    -webkit-user-select:text; /* Safari */        
+    -moz-user-select: text; /* Firefox */
+    -ms-user-select: text; /* IE10+/Edge */
+    user-select: text; /* Standard */
+}
+  
+/* Display list items side by side */
+ul.breadcrumb li {
+    font:1.2em/1.62 sans-serif;
+    display: inline;
+}
+  
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: white;
+    content: "/\00a0";
+}
+  
+/* Add a color to all links inside the list */
+a, a:visited {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: #aaa;
+}
+  
+/* Add a color on mouse-over */
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+.box>.body>*:not(.passthrough) {
+    color:white;
+}
+
+.body>:last-child {
+    margin-bottom: 0.5em;
+}
+
+.imgborder {
+    box-shadow: 0 0 6px 6px #777;
+    display: inline-block;
+}
+
+.container {
+    display: flex;
+  }
+.container_box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+.container_box:first-child > span { margin-left: auto; margin-right: 0;}
+  
+.container_box:last-child  > span { margin-right: auto; margin-left: 0; }

@@ -12,7 +12,7 @@ content = "# Swag Weasels"
 [[boxes.parts]]
 kind = "body"
 content = """
-<iframe style="isolation: isolate; display: block; margin-left: auto; margin-right: auto; margin-top: 1em; display:block; width:100%;"
+<iframe style="isolation: isolate; display: block; margin-left: auto; margin-right: auto; margin-top: 1em; width:100%;"
 src="packaged" allowtransparency="true" width="720" height="525" frameborder="0" scrolling="no" allowfullscreen></iframe>
 """
 [[boxes]]
@@ -54,4 +54,6 @@ Yes there are a few bugs, but - not to sound dispassionate - I don't really care
     document.getElementById("footer").innerHTML += "<span> - July 2022</span>"
     // ~07/08/22
 </script>
+
+July 2022
 """
