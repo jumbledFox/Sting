@@ -15,6 +15,7 @@ content = """
 I copied this from my old website - I still need to update it!!
 """
 
+[[boxes]]
 [[boxes.parts]]
 kind = "body"
 content = """
