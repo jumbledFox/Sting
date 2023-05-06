@@ -37,8 +37,28 @@ fn main() {
     let mut path_fancy_names: HashMap<String, String> = HashMap::new();
 
     // Clear the output path
-    fs::remove_dir_all("output/").unwrap();
-    fs::create_dir("output/").unwrap();
+    for entry in WalkDir::new("../stingoutput").into_iter().filter_map(|e| e.ok()) {
+        let directory_path = &entry.path().clone().to_str().unwrap();
+        
+        if directory_path == &"../stingoutput" || directory_path.starts_with("../stingoutput\\.git") {
+            continue;
+        }
+        // Skip the entry if there's an error in the metadata
+        if entry.metadata().is_err() {
+            println!("Error reading metadata of file {:?}!!!! Q///Q", entry.path());
+            continue;
+        }
+        let metadata = entry.metadata().unwrap();
+        // If the entry is a directory, create that directory in the output folder
+        if metadata.is_dir() {
+            fs::remove_dir_all(directory_path).unwrap();
+            continue;
+        } else {
+            fs::remove_file(directory_path).unwrap()
+        }
+    }
+    //fs::remove_dir_all("output/").unwrap();
+    //fs::create_dir("output/").unwrap();
 
     let html_template = fs::read_to_string("res/template.html")
         .expect("Should have been able to read the file");
@@ -58,12 +78,12 @@ fn main() {
         if metadata.is_dir() {
             path_fancy_names.insert(directory_path.to_string(), titlecase(&d_path_split[d_path_split.len()-1].replace("-", " ")));
 
-            fs::create_dir_all("output/".to_owned() + directory_path).ok();
+            fs::create_dir_all("../stingoutput/".to_owned() + directory_path).ok();
             continue;
         }
         // If the entry is a file that isn't gonna be parsed, copy it over
         if !directory_path.ends_with("index.toml") {
-            fs::copy(entry.path(), "output/".to_owned() + directory_path).ok();
+            fs::copy(entry.path(), "../stingoutput/".to_owned() + directory_path).ok();
             continue;
         }
         // If we're dealing with a file needing to be parsed...
@@ -106,7 +126,7 @@ fn main() {
             navbar += &("<li>".to_owned() + &page.meta.title + "</li>\n</ul></div>");
         }
         
-        fs::write("output/".to_owned() + &directory_path[..directory_path.len()-10] + "/index.html", 
+        fs::write("../stingoutput/".to_owned() + &directory_path[..directory_path.len()-10] + "/index.html", 
             html_template
             .replace("{content}", &markdown)
             .replace("{title}", &page.meta.title)
