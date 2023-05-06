@@ -38,7 +38,7 @@ Recently I've been using music tracker software instead of FL Studio, and I'm lo
 This is my first track, made in a few hours over a few days. (The video compressed to 4mb, making it even more authentic to the era!)
 
 <m><video controls style="width: 100%">
-  <source src="/oh.mp4" type="video/mp4">
+  <source src="oh.mp4" type="video/mp4">
   In this day and age, your browser still does not support HTML video. I'm not mad, just disappointed.
 </video></m>
 
@@ -51,7 +51,7 @@ This is my first track, made in a few hours over a few days. (The video compress
 
 ## Chippy.wav
 <audio controls>
-  <source src="/chippy.wav" type="audio/wav">
+  <source src="chippy.wav" type="audio/wav">
 Why doesn't your browser support the little audio player thing?
 </audio> 
 
@@ -61,7 +61,7 @@ This is a little chiptune song I made quite some time ago, I used <r>Neochip</r>
 
 ## Map.mp3
 <audio controls>
-  <source src="/map.mp3" type="audio/mp3">
+  <source src="map.mp3" type="audio/mp3">
 Come on.. what are you using that doesn't support an audio player? Netscape Navigator??
 </audio> 
 
@@ -71,7 +71,7 @@ This is a song I created for a Minecraft map younger me wanted to make but never
 
 ## Titlelaser.wav
 <audio controls>
-  <source src="/titlelaser.wav" type="audio/wav">
+  <source src="titlelaser.wav" type="audio/wav">
 Why doesn't your browser support the little audio player thing?
 </audio> 
 
@@ -85,7 +85,7 @@ Yes, it's an mp4 file! A recording of FL Studio playing the track..
 I did it this way because I wanted you to see the layers that make up something like this, and not because <r>Neochip</r> was playing up and not exporting properly..
 
 <m><video controls style="width: 100%">
-  <source src="/odd.mp4" type="video/mp4">
+  <source src="odd.mp4" type="video/mp4">
   Your browser does not support HTML video.
 </video></m>
 
@@ -99,7 +99,7 @@ Around this time I stopped using <r>Neochip</r> due to it always crashing!!! I s
 
 ## Klik.wav
 <audio controls>
-  <source src="/klik.wav" type="audio/wav">
+  <source src="klik.wav" type="audio/wav">
 Why doesn't your browser support the little audio player thing?
 </audio> 
 
@@ -109,7 +109,7 @@ Inspired by popular youtuber <r>Kliksphilip</r> and his father's music, I made t
 
 ## Ringer.mp3
 <audio controls>
-  <source src="/ringer.mp3" type="audio/mp3">
+  <source src="ringer.mp3" type="audio/mp3">
 I beg of you, get a better browser
 </audio> 
 
@@ -119,7 +119,7 @@ This was just me goofily messing around, but I like it enough to put it here.
 
 ## Hyper2.mp3
 <audio controls>
-  <source src="/hyper2.mp3" type="audio/mp3">
+  <source src="hyper2.mp3" type="audio/mp3">
 I beg of you, get a better browser
 </audio> 
 
@@ -129,7 +129,7 @@ A nice little melody I made, again, all of these need to be seriously developed 
 
 ## Cassiooo.mp3
 <audio controls>
-  <source src="/cassiooo.mp3" type="audio/mp3">
+  <source src="cassiooo.mp3" type="audio/mp3">
 I beg of you, get a better browser PLEASE
 </audio> 
 
@@ -139,7 +139,7 @@ I made this one for a [Swag Weasels](/games/swag-weaselz) sequel, its currently 
 
 ## Steventest.mp3
 <audio controls>
-  <source src="/steventest.mp3" type="audio/mp3">
+  <source src="steventest.mp3" type="audio/mp3">
 I beg of you, get a better browser PLEASE
 </audio> 
 
@@ -149,7 +149,7 @@ Another one inspired by the style of <r>Kliksphilip</r>'s father, <r>Steventhedr
 
 ## Fox.mp3
 <audio controls>
-  <source src="/fox.mp3" type="audio/mp3">
+  <source src="fox.mp3" type="audio/mp3">
 I beg of you, get a better browser PLEASE
 </audio> 
 
@@ -159,7 +159,7 @@ Wowzers, another one inspired by them.. it's almost like the songs I listen to a
 
 ## Amelodiuswave.mp3
 <audio controls>
-  <source src="/amelodiuswave.mp3" type="audio/mp3">
+  <source src="amelodiuswave.mp3" type="audio/mp3">
 I beg of you, get a better browser PLEASE
 </audio> 
 
