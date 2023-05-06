@@ -12,7 +12,7 @@ content = "# Music"
 [[boxes.parts]]
 kind = "body"
 content = """
-I copied this from my old website - I still need to update it!!
+I copied this from my old website - I still need to update it!! I've been making more better music as of recent
 """
 
 [[boxes]]
@@ -37,7 +37,7 @@ Recently I've been using music tracker software instead of FL Studio, and I'm lo
 
 This is my first track, made in a few hours over a few days. (The video compressed to 4mb, making it even more authentic to the era!)
 
-<video controls style="width: 100%">
+<video controls style="width: 100%; isolation: isolate;">
   <source src="oh.mp4" type="video/mp4">
   In this day and age, your browser still does not support HTML video. I'm not mad, just disappointed.
 </video>
@@ -84,7 +84,7 @@ Yes, it's an mp4 file! A recording of FL Studio playing the track..
 
 I did it this way because I wanted you to see the layers that make up something like this, and not because <r>Neochip</r> was playing up and not exporting properly..
 
-<video controls style="width: 100%">
+<video controls style="width: 100%; isolation: isolate;">
   <source src="odd.mp4" type="video/mp4">
   Your browser does not support HTML video.
 </video>
