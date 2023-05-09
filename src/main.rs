@@ -1,8 +1,6 @@
 use serde::Deserialize;
 use walkdir::WalkDir;
 use comrak::{markdown_to_html, ComrakOptions};
-use std::borrow::Borrow;
-use std::env;
 use std::fs;
 use std::collections::HashMap;
 use titlecase::titlecase;
