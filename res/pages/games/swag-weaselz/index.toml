@@ -12,7 +12,7 @@ content = "# Swag Weasels"
 [[boxes.parts]]
 kind = "body"
 content = """
-<iframe style="isolation: isolate; display: block; margin-left: auto; margin-right: auto; margin-top: 1em; width:100%;"
+<iframe style="image-rendering: pixelated; isolation: isolate; display: block; margin-left: auto; margin-right: auto; margin-top: 1em; width:100%;"
 src="packaged" allowtransparency="true" width="720" height="525" frameborder="0" scrolling="no" allowfullscreen></iframe>
 """
 [[boxes]]
