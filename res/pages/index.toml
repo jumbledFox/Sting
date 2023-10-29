@@ -14,6 +14,8 @@ kind = "body"
 content = """
 Hello! I'm jumbledFox, a 16 year old programmer from the UK.
 This is my epic website.
+
+<imgrsorig>![88x31, hotlink all you want :3](button.gif)</span>
 """
 # ---------- #
 [[boxes]]
@@ -57,22 +59,6 @@ I'm only recently learning Rust after a good few years of C++, getting used to i
 My favourite bands are probably The Police and Genesis currently, however recently I've been getting into artists like 100 gecs, and I really love them!!!!
 
 I love Half-Life, CS:GO, and Portal, they're some of my favourite games and huge inspirations in my projects :3
-
-I've been having cold showers for <span id=\"coldshowers\">---</span> days now
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    // Live cold shower update
-    var date1 = new Date("10/22/2021");
-    var date2 = new Date();
-
-    var Difference_In_Time = date2.getTime() - date1.getTime();
-
-    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
-
-    document.getElementById("coldshowers").innerHTML = Math.floor(Difference_In_Days) + " days";
-});
-</script>
 
 My discord is <r>jumbledFox#7214</r>, feel free to add me!
 
