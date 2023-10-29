@@ -15,7 +15,7 @@ content = """
 Hello! I'm jumbledFox, a 16 year old programmer from the UK.
 This is my epic website.
 
-<imgrsorig>![88x31, hotlink all you want :3](button.gif)</span>
+[<imgrsorig>![88x31, hotlink all you want :3](button.gif)</span>](https://jumbledfox.github.io)
 """
 # ---------- #
 [[boxes]]
