@@ -80,7 +80,7 @@ What to do??
 Well, this is because we're getting the distance from the player to the wall, as opposed to the camera plane to the wall.
 
 I drew a diagram and wrote an explanation, the diagram is nice so I'll keep it, but my explanation was awful, [click here for a GOOD one](https://www.permadi.com/tutorial/raycast/rayc8.html).
-![Diagram of what I (poorly) explained above](length-diagram.PNG)
+![Diagram of what I (poorly) explained above](length-diagram.png)
 
 To get the correct distance, some trigonometry tells us that we should divide the distorted distance by the cosine of the angle. Thank you, [permadi.com](https://permadi.com)!
 
