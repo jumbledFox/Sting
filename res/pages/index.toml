@@ -12,7 +12,7 @@ content = "# Hello! :3"
 [[boxes.parts]]
 kind = "body"
 content = """
-Hello! I'm jumbledFox, a 16 year old programmer from the UK.
+Hello! I'm jumbledFox, a 17 year old programmer from the UK.
 This is my epic website.
 
 [<imgrsorig>![88x31, hotlink all you want :3](button.gif)</span>](https://jumbledfox.github.io)
@@ -44,6 +44,8 @@ From gizmos to gadgets, I like to tinker. Here are some physical things I've mad
 
 ## *Other various projects*
 
+[Raycaster](/projects/raycaster) - A little raycaster written in Rust
+
 [jumbledFont](/projects/jumbledfont) - A neat pixely font I made a while ago.
 """
 # ---------- #
@@ -56,7 +58,7 @@ Hello!!! You can call me jumbledFox. I program in Rust, Python, and C++, as well
 
 I'm only recently learning Rust after a good few years of C++, getting used to it is going to take some time!
 
-I love a bunch of different kinds of music, mainly prog rock though. My favourite bands are Pink Floyd, Genesis, Supertramp, The Police, Oingo Boingo, ELO, The Beatles, Huey Lewis, Yes, Rush, The Alan Parsons Project, Men Without Hats, Kraftwerk, Iron Maiden, and Van Halen.. which is a very long list haha
+I love a bunch of different kinds of music, mainly prog rock though. My favourite bands are Pink Floyd, Genesis, Supertramp, The Police, Oingo Boingo, ELO, The Beatles, Huey Lewis, Yes, Rush, The Doors, The Alan Parsons Project, Men Without Hats, Kraftwerk, Iron Maiden, and Van Halen.. which is a very long list haha
 
 I love Half-Life, CS:GO, and Portal, they're some of my favourite games and huge inspirations in my projects :3
 
