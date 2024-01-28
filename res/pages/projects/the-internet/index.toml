@@ -7,6 +7,20 @@ background = "rainbow"
 [[boxes]]
 [[boxes.parts]]
 kind = "title"
+content = "# Foreword"
+
+[[boxes.parts]]
+kind = "body"
+content = """
+This is a foreword from the future:
+
+Do keep in mind I made this a while ago, the soldering is AWFUL! I can solder much better now (barely).
+
+The rest of the page hasn't been altered.
+"""
+[[boxes]]
+[[boxes.parts]]
+kind = "title"
 content = "# The Internet"
 
 [[boxes.parts]]
